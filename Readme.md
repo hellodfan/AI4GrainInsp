@@ -3,22 +3,52 @@
 This repository contains detailed information for our ECAI2023 paper entitled **Identifying the Defective: Detecting Damaged Grains for Cereal Appearance Inspection**.
 
 
+## Get Started 
+
+### Environment 
+
+**Python3.8**
+
+**Packages**:
+- torch==1.12.1
+- torchvision==0.13.1
+- numpy==1.22.4
+- opencv-python==4.5.1
+
+or  `pip install -r requirements.txt`
+
+(Above environment setups are not the minimum requiremetns, other versions might work too.)
 
 
-# Code
+### Dataset
 
-## Setups
+#### OOD-GrainSet
 
+To train on the OOD-GrainSet (see below) and extract it. 
 
+The dataset folders/files follow its original structure.
 
-## Train
+#### MvTecAD
 
+To train on the MVtec Anomaly Detection dataset [download](https://www.mvtec.com/company/research/datasets/mvtec-ad) the data and extract it. The [Describable Textures dataset](https://www.robots.ox.ac.uk/~vgg/data/dtd/) was used as the anomaly source  image set in most of the experiments in the paper. You can run the **download_dataset.sh** script from the project directory to download the DTD datasets to the **texture** folder in the project directory:
 
-## Test
+```
+./texture/download_dataset.sh
+```
 
+The dataset folders/files follow its original structure.
 
+### Run
 
+#### Demo train
 
+Please specicy dataset path (line1) and log folder (line10) in `run_*.sh` before running. Edit `run_*.sh` to edit dataset class and dataset path.(such as `run_mvtec.sh,run_wheat_set1.sh`,...)
+
+`run_*.sh` gives the configuration to train models on MVTecAD dataset.
+
+```
+bash run_*.sh
+```
 
 
 
@@ -60,8 +90,10 @@ Based on the whole **OOD-GrainSet**, we conduct two data partition schedules in 
   - **Set2:** edible grains vs. inedible grains (*BN, AP, BP and HD are also edible to some extent*)
 
 
+
+
 |       | HY | SD | FS | BP/HD| MY| BN | AP| IM| 
-| ----- | ----------- | ------------ | ------------ | ---------------------------- | --------- | ---------- | --------------------- | --------------- | ----- |
+| ----- | ----------- | ------------ | ------------ | -------------------------| --------- | ---------- | --------------------- | --------------- | 
 | Set1 (healthy) | $\times$        | $\times$           | $\times$           | $\times$                           | $\times$       | $\times$         | $\times$                    | $\times$             |
 | Set2 (edible) | $\checkmark$         | $\times$           | $\times$           | $\checkmark$                           | $\times$       | $\checkmark$         | $\checkmark$                    | $\times$             | 
 
@@ -163,3 +195,11 @@ Based on the whole **OOD-GrainSet**, we conduct two data partition schedules in 
 }
 
 ```
+
+## Acknowledgement and License
+
+Thanks for [SimpleNet](https://github.com/DonaldRR/SimpleNet).
+
+All code within the repo is under [MIT license](https://mit-license.org/)
+
+

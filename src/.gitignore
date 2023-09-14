@@ -1,0 +1,6 @@
+res
+results
+*.pth
+*.png
+__pycache__
+texture/dtd
