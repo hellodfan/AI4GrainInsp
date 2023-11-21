@@ -1,26 +1,28 @@
 # Overview
 
-This repository contains detailed information for our ECAI2023 paper entitled **Identifying the Defective: Detecting Damaged Grains for Cereal Appearance Inspection**.
+This repository contains detailed information for our *ECAI2023* paper entitled **Identifying the Defective: Detecting Damaged Grains for Cereal Appearance Inspection** ([ECAI2023](https://ebooks.iospress.nl/doi/10.3233/FAIA230329): https://ebooks.iospress.nl/doi/10.3233/FAIA230329 , [ArXiv](https://arxiv.org/abs/2311.11901): https://arxiv.org/abs/2311.11901).
+
+
+
+
 
 
 ## Get Started 
 
 ### Environment 
 
-**Python3.8**
+- Python3.8
 
-**Packages**:
-- torch==1.12.1
-- torchvision==0.13.1
-- numpy==1.22.4
-- opencv-python==4.5.1
-
-or  `pip install -r requirements.txt`
-
-(Above environment setups are not the minimum requiremetns, other versions might work too.)
+- Packages  or  `pip install -r requirements.txt`
+```
+  torch==1.12.1
+  torchvision==0.13.1
+  numpy==1.22.4
+  opencv-python==4.5.1
+```
 
 
-### Dataset
+### Datasets
 
 #### OOD-GrainSet
 
@@ -39,8 +41,6 @@ To train on the MVtec Anomaly Detection dataset [download](https://www.mvtec.com
 The dataset folders/files follow its original structure.
 
 ### Run
-
-#### Demo train
 
 Please specicy dataset path (line1) and log folder (line10) in `run_*.sh` before running. Edit `run_*.sh` to edit dataset class and dataset path.(such as `run_mvtec.sh,run_wheat_set1.sh`,...)
 
@@ -171,10 +171,14 @@ Based on the whole **OOD-GrainSet**, we conduct two data partition schedules in 
 
 
 
-# Cite
+# Citation
 
+
+
+If our paper has been of assistance, we would appreciate it if you could consider citing it in your work.
 
 ``` bibtex
+
 
 @incollection{fan2023ai4graininsp,
   title={Identifying the Defective: Detecting Damaged Grains for Cereal Appearance Inspection},
@@ -194,7 +198,30 @@ Based on the whole **OOD-GrainSet**, we conduct two data partition schedules in 
   year={2022}
 }
 
+
+@article{fan2023annotated,
+  title={An annotated grain kernel image database for visual quality inspection},
+  author={Fan, Lei and Ding, Yiwen and Fan, Dongdong and Wu, Yong and Chu, Hongxia and Pagnucco, Maurice and Song, Yang},
+  journal={Scientific Data},
+  volume={10},
+  number={1},
+  pages={778},
+  year={2023},
+  publisher={Nature Publishing Group UK London}
+}
+
+
+
+@article{fan2023av4gainsp,
+  title={AV4GAInsp: An Efficient Dual-Camera System for Identifying Defective Kernels of Cereal Grains},
+  author={Fan, Lei and Ding, Yiwen and Fan, Dongdong and Wu, Yong and Chu, Hongxia and Pagnucco, Maurice and Song, Yang},
+  journal={IEEE Robotics and Automation Letters},
+  year={2023},
+  publisher={IEEE}
+}
+
 ```
+
 
 ## Acknowledgement and License
 
